@@ -23,6 +23,7 @@ Run the command [`./delete-cluster.sh`](./delete-cluster.sh)
 * Open the file [`./kubeadm/kubeadm-config.yaml`](./kubeadm/kubeadm-config.yaml), 
     * Change the values of `advertiseAddress` and `controlPlaneEndpoint` according to your environemt. 
     * Add your control plan node's address to certSANs too.
+    * Change the `name` of `nodeRegistration` to the pc name which you run as the control plane node.
 * If you would like to use Cert Manager, make sure to change the email in [nginx-ingress/cert-manager/cert-manager-issuers.yaml](./nginx-ingress/cert-manager/cert-manager-issuers.yaml) too.
 * Change `username` and `usergroup` in the command [`./create-cluster.sh`](./create-cluster.sh), and run it.
 ## 3.2. Join worker node

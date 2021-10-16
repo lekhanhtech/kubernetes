@@ -15,10 +15,10 @@ Make sure you have installed/config these tools before going to futher steps:
         ```
         ./node-open-ports.sh
         ```
-# 2. Clean the old cluster:
+# 2. Clean the old cluster
 Run the command [`./delete-cluster.sh`](./delete-cluster.sh)
 
-# 3. Create new cluster:
+# 3. Create new cluster
 ## 3.1. Init cluster
 * Open the file [`./kubeadm/kubeadm-config.yaml`](./kubeadm/kubeadm-config.yaml), 
     * Change the values of `advertiseAddress` and `controlPlaneEndpoint` according to your environemt. 

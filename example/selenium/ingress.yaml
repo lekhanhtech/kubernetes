@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: selenium-router
+spec:
+  defaultBackend:
+    service:
+      name: selenium-router
+      port:
+        number: 4444
+  rules:
+  - host: selenium.example.org
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: selenium-router
+            port:
+              number: 4444
